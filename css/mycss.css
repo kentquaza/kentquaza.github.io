@@ -1,0 +1,184 @@
+h1{
+
+	color: white;
+}
+
+h2{
+
+	color: seagreen;
+}
+#menu_txt {
+	margin: 0;
+	background-color: #595780; 
+	text-align: center;
+	padding: 50px 20px 50px 80px;/* trên phải dưới trái tính từ các cạnh đi vào */
+}
+
+/*tim tất cả thẻ nav để format*/
+nav {
+	background-color: #c74c4c ;
+	padding: 14px 20px; /* cặp trên dưới - trái phải padding */
+	overflow: hidden;
+}
+
+/*Đi vào nav rồi vào a*/
+nav a {
+
+	color: white ;
+
+	padding: 14px 20px;
+
+	text-decoration: none; /* xóa định dạng chữ trong thẻ a */
+
+	text-align: center;
+
+	 display: block; /* lấy toàn bộ text thành hàng dọc */
+
+	 /*float: left;*/
+}
+
+nav a:hover { /* khi hơ chuột trên thẻ a trong nav =>xảy ra hành động j đó */
+
+	background-color: #DDD;
+	color:  black;
+}
+nav a.mn_l{
+	float: left;
+}
+
+nav a.mn_r{
+	float: right;
+}
+
+#left-side {
+
+flex: 30%;
+padding: 10px 10px;
+background-color: #F1F1F1;
+}
+
+#right-side {
+
+flex: 70%;
+padding: 10px 10px;
+background-color: #bcf7c6;
+
+}
+#flex-content {
+
+	display: flex;
+	flex-wrap: nowrap;
+	/*flex-wrap: wrap; padding bị thừa sẽ bị đẩy xuống dưới. No wrap sẽ ko đẩy*/ 
+}
+
+
+footer {
+
+	padding: 50px 80px 50px 20px;
+	background-color: #302a30;
+	color: white ;
+}
+
+#send-mail {
+
+	color: white;
+}
+
+
+table {
+/*border-collapse: collapse;*/
+}
+table, th, td {
+border: 1px solid black;
+
+padding: 5px;
+
+text-align: center;
+}
+
+th {
+
+	background-color: yellow;
+}
+
+/* giới hạn mức độ kéo của trình duyệt */
+@media(max-width: 800px) {
+#left-side{
+	flex: 100%;
+}
+#right-side{
+	flex: 100%;
+}
+#flex-content{
+
+	flex-wrap: wrap;
+}
+
+.team_item{
+
+	flex: 50%;
+}
+}
+
+/*@media(max-width: 800px) {
+#left-side{
+	flex: 100%;
+}
+#right-side{
+	flex: 100%;
+}
+#flex-content{
+
+	flex-wrap: wrap;
+}
+
+}*/
+
+.team_item{
+/*	width: 40%;
+	float: left;*/
+	flex: 33%;
+}
+.team_img{
+
+	width: 50%;
+}
+#team-container{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.team_title{
+
+	padding: 10px 10px 5px 10px;
+	font-weight: bold ;
+	font-size: 150%;
+}
+
+.team_des {
+
+	margin: 0px 10px 20px 10px;
+}
+/* margin : <x px > */ để tạo một khoảng từ ngoài tới padding 
+
+/*Muốn xóa margin , padding toàn trang 
+
+* {
+
+	padding: 0;
+	margin: 0;
+}*/
+
+/*để thẻ to nav ko có padding nhưng thẻ a trong nav có padding và k phình ra ngoài
+và paddinh của thẻ nav ngoài cũng phồng theo ta làm như sau :
+
+- nav to để overflow: hidden ;
+- nav a để display: block ;
+- float: left 
+- có thể trôi sang phải */ 
+
+/*
+- id để dùng gán tên cho một đối tượng
+- class dùng để cho nhiều đối tượng 
+
+- format giống nhau trong css , nhưng id dùng # còn class dùng .
